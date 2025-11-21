@@ -59,45 +59,27 @@ texture = ExtResource("6_bayqr")
 expand_mode = 1
 stretch_mode = 5
 
-[node name="VBoxContainer" type="VBoxContainer" parent="."]
-clip_contents = true
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.75
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = -360.32007
-offset_top = 116.0
-offset_right = -176.0
-offset_bottom = -152.0
-focus_mode = 3
-mouse_filter = 0
-
-[node name="RichTextLabel" type="RichTextLabel" parent="VBoxContainer"]
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 unique_name_in_owner = true
-layout_mode = 2
+stream = ExtResource("7_1fga6")
+
+[node name="ActionButtonsVBoxContainer" type="VBoxContainer" parent="."]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 1082.0
+offset_top = 639.0
+offset_right = 1746.0
+offset_bottom = 1071.0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 1079.6799
+offset_top = 136.0
+offset_right = 1743.6799
+offset_bottom = 267.0
 size_flags_horizontal = 3
 size_flags_vertical = 2
 bbcode_enabled = true
 text = "Hello World "
 fit_content = true
-
-[node name="ActionButtonsVBoxContainer" type="VBoxContainer" parent="VBoxContainer"]
-unique_name_in_owner = true
-layout_mode = 2
-
-[node name="Button" type="Button" parent="VBoxContainer/ActionButtonsVBoxContainer"]
-layout_mode = 2
-text = "Test Button"
-
-[node name="Button2" type="Button" parent="VBoxContainer/ActionButtonsVBoxContainer"]
-layout_mode = 2
-text = "Test Button"
-
-[node name="Button3" type="Button" parent="VBoxContainer/ActionButtonsVBoxContainer"]
-layout_mode = 2
-text = "Test Button"
-
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-unique_name_in_owner = true
-stream = ExtResource("7_1fga6")
