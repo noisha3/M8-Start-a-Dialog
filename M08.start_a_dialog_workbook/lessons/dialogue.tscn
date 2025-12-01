@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://chprvwfixox2y"]
+[gd_scene load_steps=14 format=3 uid="uid://chprvwfixox2y"]
 
 [ext_resource type="Theme" uid="uid://cshg3sgf0xxq" path="res://assets/main_theme.tres" id="1_nggfo"]
 [ext_resource type="Script" uid="uid://c673ndsi3esbr" path="res://lessons/dialogue.gd" id="2_n1q1t"]
@@ -10,52 +10,18 @@
 [ext_resource type="Texture2D" uid="uid://d000xjtr4iqtk" path="res://assets/emotion_regular.png" id="6_bayqr"]
 [ext_resource type="AudioStream" uid="uid://chgko4hmxwxu5" path="res://assets/talking_synth.ogg" id="7_1fga6"]
 
-[sub_resource type="Resource" id="Resource_rjbgl"]
-script = ExtResource("5_ujubm")
-text = "Yes :)"
-target_line_idx = 1
-metadata/_custom_type_script = "uid://itdxxii7hrfw"
-
-[sub_resource type="Resource" id="Resource_gkm7m"]
-script = ExtResource("5_ujubm")
-text = "No :("
-is_quit = true
-metadata/_custom_type_script = "uid://itdxxii7hrfw"
-
-[sub_resource type="Resource" id="Resource_1m3r0"]
-script = ExtResource("3_xlxck")
-choices = Array[ExtResource("5_ujubm")]([SubResource("Resource_rjbgl"), SubResource("Resource_gkm7m")])
-text = "Hello do you like Chocolate Ice Cream?"
-metadata/_custom_type_script = "uid://dei5f1ruqnct7"
-
 [sub_resource type="Resource" id="Resource_xlxck"]
 script = ExtResource("5_ujubm")
-text = "Toppings! :)"
-target_line_idx = 2
+is_quit = true
 metadata/_custom_type_script = "uid://itdxxii7hrfw"
 
 [sub_resource type="Resource" id="Resource_ujubm"]
 script = ExtResource("5_ujubm")
-text = "Plain :("
-is_quit = true
 metadata/_custom_type_script = "uid://itdxxii7hrfw"
 
-[sub_resource type="Resource" id="Resource_1f3kq"]
+[sub_resource type="Resource" id="Resource_rjbgl"]
 script = ExtResource("3_xlxck")
 choices = Array[ExtResource("5_ujubm")]([SubResource("Resource_xlxck"), SubResource("Resource_ujubm")])
-text = "Do you put toppings or do you like it plain?"
-metadata/_custom_type_script = "uid://dei5f1ruqnct7"
-
-[sub_resource type="Resource" id="Resource_5rpy8"]
-script = ExtResource("5_ujubm")
-text = "Finished!"
-is_quit = true
-metadata/_custom_type_script = "uid://itdxxii7hrfw"
-
-[sub_resource type="Resource" id="Resource_m4u2h"]
-script = ExtResource("3_xlxck")
-choices = Array[ExtResource("5_ujubm")]([SubResource("Resource_5rpy8")])
-text = "Great! Me Too!"
 metadata/_custom_type_script = "uid://dei5f1ruqnct7"
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_efgpg"]
@@ -74,7 +40,7 @@ grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("1_nggfo")
 script = ExtResource("2_n1q1t")
-dialogue_items = Array[ExtResource("3_xlxck")]([SubResource("Resource_1m3r0"), SubResource("Resource_1f3kq"), SubResource("Resource_m4u2h")])
+dialogue_items = Array[ExtResource("3_xlxck")]([SubResource("Resource_rjbgl"), null])
 
 [node name="Background" type="ColorRect" parent="."]
 material = SubResource("ShaderMaterial_efgpg")
